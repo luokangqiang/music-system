@@ -1,0 +1,50 @@
+#playerId_newPage_Content {
+    display: flex;
+    max-width: 600px; /* 设置最大宽度，根据需要调整 */
+    margin: 20px auto; /* 设置边距，根据需要调整 */
+    overflow-y: hidden; /* 隐藏垂直滚动条 */
+}
+
+#player_image {
+    flex: 1;
+    padding: 10px;
+}
+
+#player_song {
+    flex: 1;
+    padding: 10px;
+    overflow-y: scroll;
+    max-height: 300px; /* 设置最大高度，根据需要调整 */
+}
+
+/* 歌词容器的样式 */
+#lyrics-container {
+    height: 300px; /* 设置歌词容器的高度，可以根据需要调整 */
+    overflow-y: auto; /* 启用垂直滚动条 */
+}
+.lyric-line {
+    cursor: pointer;
+    padding: 5px 0;
+}
+.lyric-line.highlight {
+    color: #ff0000; /* 设置高亮时的文字颜色为红色，你可以根据需要修改颜色 */
+    background-color: #ffff00; /* 设置高亮时的背景颜色为黄色，你可以根据需要修改颜色 */
+    font-weight: bold; /* 设置高亮时的文字加粗，你可以根据需要修改样式 */
+}
+
+.lyric-line.active {
+    color: orange; /* 设置活动歌词的文本颜色为红色，你可以根据需要更改颜色 */
+    font-weight: bold; /* 设置活动歌词的字体加粗 */
+}
+/* 修改滚动条的背景色为透明:使用 ::-webkit-scrollbar 相关的伪元素来选择滚动条的各个部分，将它们的 background-color 设置为透明。这里使用的是 WebKit 浏览器的私有样式，所以这些样式可能在不同浏览器中的兼容性存在差异 */
+/*#lyrics-container::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+#lyrics-container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+#lyrics-container::-webkit-scrollbar-track {
+    background-color: transparent;
+}*/
