@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90c7e4ae-6fa3-4deb-b16f-4d3aca0970f5" name="变更" comment="2021611076罗子鸣和2021311049李家顺对HomePage.jsp的播放器弹出界面的js+css进行操作">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="90c7e4ae-6fa3-4deb-b16f-4d3aca0970f5" name="变更" comment="2021611076罗子鸣和2021311049李家顺对HomePage.jsp的播放器弹出界面的js+css进行操作" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,8 +20,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/代码/src/main/webapp/css" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -42,6 +45,7 @@
       <workItem from="1703064315817" duration="61000" />
       <workItem from="1703064386460" duration="39000" />
       <workItem from="1703064435500" duration="16000" />
+      <workItem from="1703320316295" duration="334000" />
     </task>
     <task id="LOCAL-00001" summary="2021611076罗子鸣和2021311049李家顺对HomePage.jsp的播放器弹出界面的js+css进行操作">
       <created>1703315424125</created>
@@ -50,7 +54,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703315424125</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2021611076罗子鸣和2021311049李家顺对HomePage.jsp的播放器弹出界面的js+css进行操作">
+      <created>1703320603821</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1703320603821</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -67,7 +78,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
