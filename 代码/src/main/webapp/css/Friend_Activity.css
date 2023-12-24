@@ -1,0 +1,205 @@
+#Friend_Activity_body{
+    width: 40%;     /* 设置整个页面的宽度 */
+    height: 100%;
+    margin: 0 auto; /* 将整个页面水平居中 */
+}
+
+#Container{
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    background-color: #F8F9FD;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* 轻微阴影效果 */
+    /*border: 0;*/
+    padding-top: 40px;
+}
+
+#Friend_Activity_Top{
+    position: fixed;
+    top: 0;         /* 总处于顶部 */
+    z-index: 999;   /* 优先覆盖所有标签内容，呈现导航栏的效果 */
+    background-color: #FFC0CB;
+    margin: 0 0 50px 0;                          /* 设置与外部边框的边距为0 */
+    width: 40%;                        /* 占据当前容器的宽度 */
+    max-width: 100%;
+    height: 40px;
+    display: flex;                      /* 使用 Flexbox 布局 */
+    justify-content: space-between;     /* 让子元素在主轴上分布，文字居中，按钮居右 */
+    align-items: center;                /* 让子元素在交叉轴上居中显示 */
+}
+
+#Friend_Activity_Title{
+    flex:1; /* 占据剩余空间内容 */
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    margin: 5px 0 5px 50px;     /* 上、右、下、左的外边距 */
+}
+
+#Friend_Activity_SendBtn{
+    border: 0;
+    border-radius: 40px;
+    font-size: 25px;
+    color: red;
+    background-color: white;
+    margin: 5px 30px 5px 0;     /* 上、右、下、左的外边距 */
+    text-align: center;         /* 文本居中 */
+    cursor: pointer;            /* 设置按钮的鼠标指针样式为手型 */
+}
+
+#Friend_Activity_SendBtn:active{
+    color: black;
+}
+#Friend_Activity_SendBtn:hover{
+    color: white;
+    background-color: red;
+}
+
+#Friend_Activity_Content{
+    width: 85%;                /* 占据当前容器的宽度 */
+    max-width: 100%;
+    margin: 15px auto;         /* 设置上下外边距，自动居中 */
+}
+
+.Friend_Share{
+    font-size: 18px;
+}
+
+.Friend_Share *:not(:first-child) *{    /* 除了第一个子标签外的 子孙标签 (其余子标签以及其子标签内部的子标签) */
+    margin-bottom: 12px;
+}
+
+.Friend_Share_Top{
+    display: flex;
+    align-items: center; /* 设置项目在交叉轴上居中对齐 */
+}
+
+.Friend_Share_Img{
+    width: 50px;        /* 设置头像容器的宽度 */
+    height: 50px;       /* 设置头像容器的高度 */
+    border-radius: 50%; /* 将容器设置为圆形 */
+    overflow: hidden;   /* 隐藏超出范围之外的内容 */
+}
+
+.Friend_Share_Username{
+    margin-left:15px;
+    font-weight: bold;  /* 字体变粗 */
+}
+
+.Friend_Share_Content, .Friend_Share_Func{
+    width: 88%;
+    margin-left: 12%;
+}
+
+.Friend_Share_Word_Content{
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;      /* 在长单词或 URL 换行 */
+}
+
+.Friend_Share_Img_Content{
+
+}
+
+.Friend_Share_Song_Link_Content{
+    text-decoration: none;      /* 取消下划线 */
+}
+
+.Friend_Share_Song_Post_Content{
+    width: 100%;
+    height: auto;   /* 自适应高度，保持比例 */
+    border-radius: 10px;    /* 设置圆角 */
+}
+
+.Friend_Share_Func{
+    width: 88%;
+    margin-left: 12%;
+}
+
+.Friend_Share_Comment_Func{
+    display: flex;
+    align-items: center;
+}
+
+.Friend_Share_Write_Comment_Func{
+    width: 80%;
+    height: 30px;
+    resize: none;   /* 防止用户调整评论框大小 */
+    overflow: hidden; /* 隐藏滚动条 */
+    border: 2px solid #FFC0CB;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.Friend_Share_Submit_Comment_Func{
+    margin-left: 3%;
+    width: 12%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.Friend_Share_Submit_Comment_Func.active{
+    cursor: pointer;    /* 在按钮上显示指向手势 */
+    background-color: #FFC0CB;
+    color: white;
+
+}
+
+.Friend_Share_Submit_Comment_Func:active{
+    transform: scale(0.95, 0.95);   /* 点击按钮时按钮大小缩放比例 */
+}
+
+.Friend_Share_Other_Func{
+    display: flex;
+    align-items: center; /* 设置项目在交叉轴上居中对齐 */
+}
+
+.Friend_Share_like_Func{
+    display: flex;
+    align-items: center; /* 设置项目在交叉轴上居中对齐 */
+    cursor: pointer;
+    margin-left: 20%;
+}
+
+.Friend_Share_like_Img, .Friend_Share_Comment_Img{
+    width: 15%;
+    height: auto;
+}
+
+.Friend_Share_See_Comment_Func{
+    display: flex;
+    align-items: center; /* 设置项目在交叉轴上居中对齐 */
+    cursor: pointer;
+}
+
+.Friend_Share_Comment_Count{
+
+}
+
+.Friend_Share_CommentArea{
+    width: 80%;
+    max-width: 100%;
+    background-color: #FFC0CB;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.Friend_Share_CommentContent{
+    width: 100%;
+    max-width: 100%;
+    font-size: 15px;
+    overflow-wrap: break-word;     /* 在长单词或 URL 换行 */
+}
+
+.Friend_Share_CommentContent_CommentUser{
+    color: #000080;
+    font-weight: bold;
+}
+
+hr{
+    border: 0;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.2); /* 设置黑色背景，调整透明度 */
+}
