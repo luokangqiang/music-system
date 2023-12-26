@@ -12,6 +12,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/note.css">
     <title>高八度</title>
 	
   </head>
@@ -21,19 +23,13 @@
       	<h1></h1>
       	<h3>新歌出炉 探索新的世界</h3>
       	<div class="row content hot-content">
-      	    <!-- 前DIV -->
-      	    <div class="col-sm-1">
-      	        <!-- 小跳动特效框 -->
-      	    	<div class=" ">
-                        <span class="musicbar animate bg-empty inline m-r-lg m-t" style="width:50px;height:60px">
-                          <span class="bar1 a3 lter"></span>
-                          <span class="bar2 a5 lt"></span>
-                          <span class="bar3 a1 bg"></span>
-                          <span class="bar4 a4 dk"></span>
-                          <span class="bar5 a2 dker"></span>
-                        </span>
-                </div><!-- 小跳动特效框 End-->
-      	    </div><!-- 该前DIV为了中DIV居中 -->
+            <!-- 前DIV -->
+            <!-- 小跳动特效框 -->
+            <div class="col-sm-1">
+                <div class="note">
+                    <i class="fas fa-music"></i>
+                </div><!-- 跳动特效框 End-->
+            </div><!-- 该前DIV为了中DIV居中 -->
       	    
       		<!--中DIV 歌曲部分-->
             <div class="col-sm-10 h-item border"><!-- 中DIV -->
@@ -43,11 +39,11 @@
 				
 				<c:forEach items="${newTrackSongList}" var="song" varStatus="status">
 				
-                      <li class="list-group-item list-group-item-light " idd="${song.songId}" title="${song.songName}">
+                      <li class="list-group-item list-group-item-light " style="background-color: rgba(255, 255, 255, 0); color: #000;" idd="${song.songId}" title="${song.songName}">
                       	<!-- 歌曲信息区 -->
                       	<div class="clear text-ellipsis">
                           <%-- <span>${status.index+1}.${song.songName}</span> --%>
-                          <span><a href="#" class="ahover" onclick="reviewLoad(${song.songId})">${status.index+1}.${song.songName}</a></span>
+                          <span><a href="#" class="ahover" onclick="reviewLoad(${song.songId})" style="color: #1b1e21">${status.index+1}.${song.songName}</a></span>
                           <span class="text-muted"> -- _ _ -- </span>
                           <span class="text-danger icon-fire"></span>
                         </div>
@@ -83,6 +79,6 @@
 		
 	  </div><!-- /.container -->
 
-
+c
   </body>
 </html>

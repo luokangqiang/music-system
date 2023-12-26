@@ -1,0 +1,11 @@
+.note {
+    font-size: 48px;
+    color: purple;
+    animation: rotateNote 7s linear infinite;
+}
+
+@keyframes rotateNote {
+    to {
+        transform: rotate(360deg); /* 旋转360度 */
+    }
+}

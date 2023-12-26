@@ -1,6 +1,4 @@
-<!--
-	管理员在搜索框中搜索特定音乐名字跳转出的 管理歌曲界面的jsp
--->
+c
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -12,6 +10,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/note.css">
     <title>高八度</title>
 	
   </head>
@@ -69,19 +69,13 @@
       	</c:if>
       	
       	<div class="row content hot-content">
-      	    <!-- 前DIV -->
-      	    <div class="col-sm-1">
-      	        <!-- 小跳动特效框 -->
-      	    	<div class=" ">
-                        <span class="musicbar animate bg-empty inline m-r-lg m-t" style="width:50px;height:60px">
-                          <span class="bar1 a3 lter"></span>
-                          <span class="bar2 a5 lt"></span>
-                          <span class="bar3 a1 bg"></span>
-                          <span class="bar4 a4 dk"></span>
-                          <span class="bar5 a2 dker"></span>
-                        </span>
-                </div><!-- 小跳动特效框 End-->
-      	    </div><!-- 该前DIV为了中DIV居中 -->
+			<!-- 前DIV -->
+			<!-- 小跳动特效框 -->
+			<div class="col-sm-1">
+				<div class="note">
+					<i class="fas fa-music"></i>
+				</div><!-- 跳动特效框 End-->
+			</div><!-- 该前DIV为了中DIV居中 -->
       	    
       		<!--中DIV 歌曲部分-->
              <div class="col-sm-10">
@@ -93,19 +87,19 @@
             			<table class="table table-striped">
             				<thead>
 							    <tr>
-							      <th scope="col">结果序号</th>
-							      <th scope="col">歌曲ID</th>
-							      <th scope="col">歌曲名称</th>
-							      <th scope="col">歌曲地址</th>
+							      <th scope="col" style="color: #1b1e21">结果序号</th>
+							      <th scope="col" style="color: #1b1e21">歌曲ID</th>
+							      <th scope="col" style="color: #1b1e21">歌曲名称</th>
+							      <th scope="col" style="color: #1b1e21">歌曲地址</th>
 							    </tr>
 							 </thead>
 							 <tbody>
 								 <c:forEach items="${songManageSearchList}" var="song" varStatus="status">
 								    <tr>
-								      <th scope="row">${status.index+1}<input type="checkbox" value="${song.songId}" aria-label="Checkbox for following text input"></th>
-								      <td>${song.songId}</td>
-								      <td>${song.songName}</td>
-								      <td>${song.songAddress}</td>
+								      <th scope="row" style="color: #1b1e21">${status.index+1}<input type="checkbox" value="${song.songId}" aria-label="Checkbox for following text input"></th>
+								      <td style="color: #1b1e21">${song.songId}</td>
+								      <td style="color: #1b1e21">${song.songName}</td>
+								      <td style="color: #1b1e21">${song.songAddress}</td>
 								    </tr>
 							   	 </c:forEach>
 							 </tbody>
@@ -202,7 +196,7 @@
 		});//处理上传 End
 		
 	});
-	//覆盖标签来显示文件名称
+	//覆盖标签来显示文件名称 searchFrame
 	function loadFile(file,fileHintId){
 		$("#"+fileHintId).html(file.name);
 	}

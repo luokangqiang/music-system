@@ -12,17 +12,24 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/note.css">
     <title>高八度</title>
 	
   </head>
   <body>
   
-  <div class="container" style="background-image: url('/image/slide1111.jpg')">
+  <div class="container" >
       	<h1></h1>
       	<h3 style="color: #6f42c1">歌曲评论 ${song.songName}</h3><!--结果：歌曲评论 歌名-->
       	<div class="row content hot-content">
-      	    <!-- 前DIV -->
-      	    <div class="col-sm-1"></div><!-- 该前DIV为了中DIV居中 -->
+			<!-- 前DIV -->
+			<!-- 小跳动特效框 -->
+			<div class="col-sm-1">
+				<div class="note">
+					<i class="fas fa-music"></i>
+				</div><!-- 跳动特效框 End-->
+			</div><!-- 该前DIV为了中DIV居中 -->
       	    
       		<!--中DIV 歌曲部分-->
             <div class="col-sm-10 h-item border"><!-- 中DIV -->
@@ -32,11 +39,11 @@
 				
 				<%-- <c:forEach items="${clickedSongList}" var="song" varStatus="status"> --%>
 				
-                      <li class="list-group-item list-group-item-light " idd="${song.songId}" title="${song.songName}">
+                      <li class="list-group-item list-group-item-light " style="background-color: rgba(255, 255, 255, 0); color: #000;" idd="${song.songId}" title="${song.songName}">
                       	<!-- 歌曲信息区 -->
                       	<div class="clear text-ellipsis">
-                          <span><a href="#" class="ahover" onclick="reviewLoad(${song.songId})">${status.index+1}.${song.songName}</a></span>
-                          <span class="text-muted"> -- _ _ -- </span>
+                          <span><a href="#" class="ahover" onclick="reviewLoad(${song.songId})" style="color: #1b1e21">${status.index+1}.${song.songName}</a></span>
+                          <span class="text-muted" style="color: #1b1e21"> -- _ _ -- </span>
                           <span class="badge badge-pill badge-primary badge-pill">${song.trendingCoefficient}</span>
                         </div>
                         <!-- 播放控制区 downloadFun(${song.songAddress})-->
@@ -75,9 +82,13 @@
 	  <div class="container">
 	  	<h1></h1>
 	  	<div class="row content">
-	  		<!-- 前DIV -->
-      	    <div class="col-sm-1">
-      	    </div><!-- 该前DIV为了中DIV居中 -->
+			<!-- 前DIV -->
+			<!-- 小跳动特效框 -->
+			<div class="col-sm-1">
+				<div class="note">
+					<i class="fas fa-music"></i>
+				</div><!-- 跳动特效框 End-->
+			</div><!-- 该前DIV为了中DIV居中 -->
       	    
       	    
       	    <!--中DIV -->
@@ -111,7 +122,7 @@
             		<div class="row content">
 						  <ul class="list-group list-group-flush">
 							<c:forEach items="${hotReviewList}" var="review" varStatus="status">
-								<li class="media list-group-item list-group-item-light">
+								<li class="media list-group-item list-group-item-light" style="background-color: rgba(255, 255, 255, 0); color: #000;">
 					                <div class="media-left">
 					                    <a href="#">
 					                        <img class="rounded img-logo" src="${pageContext.request.contextPath}/image/defaultUserLogo.jpg" alt="菜鸟" >
@@ -146,7 +157,7 @@
             		<div class="row content">
 						  <ul class="list-group list-group-flush">
 							<c:forEach items="${newReviewList}" var="review" varStatus="status">
-								<li class="media list-group-item list-group-item-light">
+								<li class="media list-group-item list-group-item-light" style="background-color: rgba(255, 255, 255, 0); color: #000;">
 					                <div class="media-left">
 					                    <a href="#">
 					                        <img class="rounded img-logo" src="${pageContext.request.contextPath}/image/defaultUserLogo.jpg" alt="菜鸟" >

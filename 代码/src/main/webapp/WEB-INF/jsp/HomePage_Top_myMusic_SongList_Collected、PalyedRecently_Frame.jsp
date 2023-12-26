@@ -20,11 +20,11 @@
 			<!--一个 JSTL 标签库的 forEach 循环，用于迭代用户的歌曲收藏列表-->
 			<c:forEach items="${myCollectionList}" var="song" varStatus="status">
 				<!--每个歌曲的列表项，包含歌曲的 ID 和标题。列表项使用 Bootstrap 样式-->
-				<li class="list-group-item list-group-item-light " idd="${song.songId}" title="${song.songName}">
+				<li class="list-group-item list-group-item-light " style="background-color: rgba(255, 255, 255, 0); color: #000;" idd="${song.songId}" title="${song.songName}">
 					<!-- 这是歌曲信息区的 div，包含歌曲的一些文本信息 -->
 					<div class="clear text-ellipsis">
 						<span><!-- 这是歌曲的链接，点击链接会执行 reviewLoad 函数，并显示歌曲的名称 -->
-							<a href="#" class="ahover" onclick="reviewLoad(${song.songId})">${status.index+1}.${song.songName}</a></span>
+							<a href="#" class="ahover" onclick="reviewLoad(${song.songId})" style="color: #1b1e21">${status.index+1}.${song.songName}</a></span>
 						<span class="text-muted"> -- _ _ -- </span>
 						<span class="text-danger icon-fire"></span>
 					</div> <!-- 播放控制区 downloadFun(${song.songAddress})-->

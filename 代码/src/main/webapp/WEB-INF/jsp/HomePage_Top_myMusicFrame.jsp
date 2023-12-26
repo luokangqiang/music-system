@@ -13,7 +13,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
-    <title>Track Stacking</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/note.css">
+
+	  <title>Track Stacking</title>
 
 
   </head>
@@ -24,31 +27,25 @@
 		<!--<h3>标签用于定义一个三级标题，显示的文本内容是"我的音乐"，后面通过嵌入JS表达式${oneDayOneWord}插入了动态的内容-->
       	<h3 style="color: #6f42c1">我的音乐 ${oneDayOneWord}</h3><!--${oneDayOneWord}可能代表一个变量或者从服务器端获取的数据，它会在运行时被实际的值替代-->
       	<div class="row content hot-content">
-      	    <!-- 前DIV -->
-      	    <div class="col-sm-1">
-      	        <!-- 小跳动特效框 -->
-      	    	<div class=" ">
-                        <span class="musicbar animate bg-empty inline m-r-lg m-t" style="width:50px;height:60px">
-                          <span class="bar1 a3 lter"></span>
-                          <span class="bar2 a5 lt"></span>
-                          <span class="bar3 a1 bg"></span>
-                          <span class="bar4 a4 dk"></span>
-                          <span class="bar5 a2 dker"></span>
-                        </span>
-                </div><!-- 小跳动特效框 End-->
-      	    </div><!-- 该前DIV为了中DIV居中 -->
+			<!-- 前DIV -->
+			<!-- 小跳动特效框 -->
+			<div class="col-sm-1">
+				<div class="note">
+					<i class="fas fa-music"></i>
+				</div><!-- 跳动特效框 End-->
+			</div><!-- 该前DIV为了中DIV居中 -->
       	    
       		<!--中DIV 歌曲部分-->
-            <div class="col-sm-10 h-item" id="mytest"><!-- 中DIV -->
+		<div class="col-sm-10 h-item" id="mytest"><!-- 中DIV -->
       		  <!-- One of three columns -->
       			
 
 		<div class="row">
-		  <div class="col-4">
+		  <div class="col-1">
 		    <div class="list-group" id="list-tab" role="tablist">
 				<!--点击主界面的“我的音乐”后显示跳转出标签“list-home（我的收藏）”和“list-profile（最近播放）”-->
-		      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">我的收藏</a>
-		      <a class="list-group-item list-group-item-action " id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">最近播放</a>
+		      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home" style="color: #1b1e21">我的收藏</a>
+		      <a class="list-group-item list-group-item-action " id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile" style="color: #1b1e21">最近播放</a>
 		    </div>
 		  </div>
 		  <div class="col-8">
@@ -57,10 +54,10 @@
 			      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
 			      		  <ul class="list-group list-group-flush" >
 							<c:forEach items="${myCollectionList}" var="song" varStatus="status">
-			                      <li class="list-group-item list-group-item-light " idd="${song.songId}" title="${song.songName}">
+			                      <li class="list-group-item list-group-item-light " style="background-color: rgba(255, 255, 255, 0); color: #000;" idd="${song.songId}" title="${song.songName}">
 			                      	<!-- 歌曲信息区 -->
 			                      	<div class="clear text-ellipsis">
-			                          <span>${status.index+1}.${song.songName}</span>
+			                          <span style="color: #1b1e21">${status.index+1}.${song.songName}</span>
 			                          <span class="text-muted"> -- _ _ -- </span>
 			                          <span class="text-danger icon-fire"></span>
 			                        </div>
@@ -89,10 +86,10 @@
 			      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
 			      		<ul class="list-group list-group-flush" >
 							<c:forEach items="${myRecentPlayList}" var="song" varStatus="status">
-			                      <li class="list-group-item list-group-item-light " idd="${song.songId}" title="${song.songAddress}"  data-duration="${song.songLength}" data-name="${song.songName}">
+			                      <li class="list-group-item list-group-item-light "  style="background-color: rgba(255, 255, 255, 0); color: #000;" id="${song.songId}" title="${song.songAddress}"  data-duration="${song.songLength}" data-name="${song.songName}">
 			                      	<!-- 歌曲信息区 -->
 			                      	<div class="clear text-ellipsis">
-			                          <span>${status.index+1}.${song.songName}</span>
+			                          <span style="color: #1b1e21">${status.index+1}.${song.songName}</span>
 			                          <span class="text-muted"> -- _ _ -- </span>
 			                          <span class="text-danger icon-fire"></span>
 			                        </div>

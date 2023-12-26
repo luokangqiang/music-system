@@ -12,6 +12,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/note.css">
     <title>高八度</title>
 	
   </head>
@@ -29,19 +31,13 @@
       	</c:if>
 	  	
 	  	<div class="row content">
-	  		<!-- 前DIV -->
-      	    <div class="col-sm-1">
-      	        <!-- 小跳动特效框 -->
-      	    	<div class=" ">
-                        <span class="musicbar animate bg-empty inline m-r-lg m-t" style="width:50px;height:60px">
-                          <span class="bar1 a3 lter"></span>
-                          <span class="bar2 a5 lt"></span>
-                          <span class="bar3 a1 bg"></span>
-                          <span class="bar4 a4 dk"></span>
-                          <span class="bar5 a2 dker"></span>
-                        </span>
-                </div><!-- 小跳动特效框 End-->
-      	    </div><!-- 该前DIV为了中DIV居中 -->
+			<!-- 前DIV -->
+			<!-- 小跳动特效框 -->
+			<div class="col-sm-1">
+				<div class="note">
+					<i class="fas fa-music"></i>
+				</div><!-- 跳动特效框 End-->
+			</div><!-- 该前DIV为了中DIV居中 -->
       	    
       	    <!--中DIV -->
             <div class="col-sm-10">
@@ -51,7 +47,7 @@
             		<div class="row content">
 						  <ul class="list-group list-group-flush">
 							<c:forEach items="${reviewManageSearchList}" var="review" varStatus="status">
-								<li class="media list-group-item list-group-item-light">
+								<li class="media list-group-item list-group-item-light" style="background-color: rgba(255, 255, 255, 0); color: #000;">
 								 	<input type="checkbox" value="${review.reviewId}" aria-label="Checkbox for following text input">
 					                <div class="media-left">
 					                    <a href="#">
@@ -61,9 +57,9 @@
 					                <div class="media-body">
 					                    <h6 class="media-heading text-primary">${review.userName}</h6>
 					
-					                    <p>${review.review}</p>
+					                    <p style="color: #1b1e21">${review.review}</p>
 					                    <div class="ds-comment-footer">
-					                        <span class="ds-time" title="${review.reviewTime}">${review.reviewTime}</span>&nbsp;
+					                        <span class="ds-time" title="${review.reviewTime}" style="color: #1b1e21">${review.reviewTime}</span>&nbsp;
 					                    </div>
 					                </div>
            						  </li>

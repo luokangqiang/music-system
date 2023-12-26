@@ -22,7 +22,7 @@
 					  <!--${newReviewList}是从服务器端提交的评论列表，var="review" 允许表示每次迭代时将当前评论对象存储在名为 review 的变量中，而 varStatus="status" 则你访问迭代的状态信-->
 					  <c:forEach items="${newReviewList}" var="review" varStatus="status">
 						  <!--一个列表项，使用了Bootstrap的样式，包含了评论的媒体（media）元素。list-group-item 和 list-group-item-light 是 Bootstrap 类，用于样式化列表项-->
-						  <li class="media list-group-item list-group-item-light"><!--包含评论作者头像的媒体左侧容器-->
+						  <li class="media list-group-item list-group-item-light" style="background-color: rgba(255, 255, 255, 0); color: #000;"><!--包含评论作者头像的媒体左侧容器-->
 							  <!--评论的用户头像-->
 							  <div class="media-left">
 			                    <a href="#"><!--一个包含头像图片的超链接，其中href="#"表示点击头像时没有具体的链接行为-->

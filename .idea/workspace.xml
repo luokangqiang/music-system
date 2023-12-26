@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90c7e4ae-6fa3-4deb-b16f-4d3aca0970f5" name="变更" comment="2021611076罗子鸣和2021311049李家顺对HomePage.jsp的播放器弹出界面的js+css进行操作" />
+    <list default="true" id="90c7e4ae-6fa3-4deb-b16f-4d3aca0970f5" name="变更" comment="2021611076罗子鸣和2021311049李家顺对HomePage.jsp的播放器弹出界面的js+css进行操作">
+      <change afterPath="$PROJECT_DIR$/代码/src/main/webapp/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/代码/src/main/webapp/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/代码/src/main/webapp/css/note.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/代码/src/main/webapp/js/HomePage_MainJs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/代码/src/main/webapp/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage_3Column_newSongComeOutFrame.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage_3Column_newSongComeOutFrame.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage_3Column_personalizedRecommendationFrame.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage_3Column_personalizedRecommendationFrame.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage_3Column_trendingRecommendationFrame.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage_3Column_trendingRecommendationFrame.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage_ManagerSearch_CommentResult.jsp_FrameFrame.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage_ManagerSearch_CommentResult.jsp_FrameFrame.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage_ManagerSearch_SongNameResult.jsp_Frame.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage_ManagerSearch_SongNameResult.jsp_Frame.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage_ManagerSearch_UserResult.jsp_Frame.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage_ManagerSearch_UserResult.jsp_Frame.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage_Top.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage_Top.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage_Top_myMusicFrame.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage_Top_myMusicFrame.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage_Top_myMusic_SongList_Collected、PalyedRecently_Frame.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage_Top_myMusic_SongList_Collected、PalyedRecently_Frame.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage_Top_rankingFrame.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage_Top_rankingFrame.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage_Top_searchFrame.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/HomePage_Top_searchFrame.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/Song_CommentAreaFrame.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/Song_CommentAreaFrame.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/Song_CommentArea_eachComment_Frame.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/Song_CommentArea_eachComment_Frame.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/Song_InformationDispalyFrame.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp/Song_InformationDispalyFrame.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/代码/src/main/webapp/css/HomePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/代码/src/main/webapp/css/HomePage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/代码/src/main/webapp/css/player_newPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/代码/src/main/webapp/css/player_newPage.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +33,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -24,17 +49,36 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/代码/src/main/webapp/WEB-INF/jsp" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\edge浏览器\大三上\软件工程\8人小组项目\十年树木\code_music_system-master\代码\src\main\webapp\WEB-INF\jsp" />
+      <recent name="D:\edge浏览器\大三上\软件工程\8人小组项目\十年树木\code_music_system-master\代码\src\main\webapp\js" />
       <recent name="D:\edge浏览器\大三上\软件工程\8人小组项目\十年树木\code_music_system-master\代码\src\main\webapp\css" />
       <recent name="D:\edge浏览器\大三上\软件工程\8人小组项目\十年树木\code_music_system-master\代码\src\main\webapp" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -47,7 +91,8 @@
       <workItem from="1703064315817" duration="61000" />
       <workItem from="1703064386460" duration="39000" />
       <workItem from="1703064435500" duration="16000" />
-      <workItem from="1703320316295" duration="980000" />
+      <workItem from="1703320316295" duration="1416000" />
+      <workItem from="1703575222472" duration="442000" />
     </task>
     <task id="LOCAL-00001" summary="2021611076罗子鸣和2021311049李家顺对HomePage.jsp的播放器弹出界面的js+css进行操作">
       <created>1703315424125</created>
@@ -70,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703320671075</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="2021611076罗子鸣和2021311049李家顺对HomePage.jsp的播放器弹出界面的js+css进行操作">
+      <created>1703321310715</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1703321310715</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,7 +139,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -102,6 +154,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2021611076罗子鸣和2021311049李家顺对HomePage.jsp的播放器弹出界面的js+css进行操作" />
-    <option name="LAST_COMMIT_MESSAGE" value="2021611076罗子鸣和2021311049李家顺对HomePage.jsp的播放器弹出界面的js+css进行操作" />
+    <MESSAGE value="fixup! 2021611076罗子鸣和2021311049李家顺对HomePage.jsp的播放器弹出界面的js+css进行操作" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixup! 2021611076罗子鸣和2021311049李家顺对HomePage.jsp的播放器弹出界面的js+css进行操作" />
   </component>
 </project>
