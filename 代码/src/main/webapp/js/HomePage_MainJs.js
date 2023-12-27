@@ -217,11 +217,11 @@ function recordPlayInfo(songId){
  * @returns
  */
 function myMusicPage(){
-	//只有登录的用户才可以
+	// 只有登录的用户才可以
 	if($("#logout")[0].style.display =='none'){
 		$("#SignInModalCenter").modal("show");
 		return;
-	} 
+	}
 	//window.location.href ="myMusicPage.do";
 	$('#hot').load("myMusicFrameLoad.do");
 	$("#playerId").show();
@@ -231,9 +231,15 @@ function myMusicPage(){
  * 好友空间
  *
  * */
-function c(){
-
-
+function Friends_Activity_Page() {
+	// 只有登录的用户才可以
+	if($("#logout")[0].style.display =='none'){
+		$("#SignInModalCenter").modal("show");
+		return;
+	}
+	$('#hot').load("myFriendActivityFrameLoad.do");
+	$('#homepage_3Column').hide();//隐藏底部的3个导航栏
+	$("#playerId").hide();//隐藏播放器
 }
 
 /**
@@ -259,6 +265,6 @@ function wordCount(input) {
        // value = value.replace(/\n|\r/gi,"");  
         // 更新计数  
         content.text(140-value.length); 
-    }  
+    }
 }
 

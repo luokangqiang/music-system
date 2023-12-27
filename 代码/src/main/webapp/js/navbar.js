@@ -15,10 +15,10 @@ $(function(){
 	            data:data,
 	            success:function(data){
 	            	var res=JSON.parse(data);
-	                if(res.status==200){
+	                if(res.status===200){
 	                    $("#SignInModalCenter").modal('hide');
-	                    //location.reload();
-	                    $('#headerId').load("headerFrameLoad.do");
+	                    // location.reload();
+	                    $('#HomePage_TopID').load("HomePage_TopLoad.do");
 	                }else{
 	                	$('#collapse-error-hint').html(res.msg);
 	                	$('#collapse-error-hint').collapse()

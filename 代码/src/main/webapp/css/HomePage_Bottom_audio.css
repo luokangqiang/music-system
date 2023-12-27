@@ -8,18 +8,19 @@
 } 暂时先去掉*/
 body{
 	font-family: 'Microsoft YaHei', 'Lantinghei SC', 'Open Sans', Arial, 'Hiragino Sans GB', 'STHeiti', 'WenQuanYi Micro Hei', 'SimSun', sans-serif;
-} 
+	height: 100%;
+}
 ul li{
 	list-style-type: none;
 }
 .audio-box{
 	position: fixed;
 	width: 100%;
-	min-width: 338px;
-	height: auto;
+	min-width: 330px;
+	height: 10%;
 	bottom: 0;
 	left: 0;
-	background-color: #20c974;;
+	background-color: #6f42c1;
 	color: #fff;
 }
 .audio-container{

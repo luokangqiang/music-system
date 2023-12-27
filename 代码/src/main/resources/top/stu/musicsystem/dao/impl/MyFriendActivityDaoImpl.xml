@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="top.stu.musicsystem.dao.MyFriendActivityDao">
+
+    <select id="selectMyFriendActivities" parameterType="int"
+            resultType="top.stu.musicsystem.model.FriendActivity">
+        SELECT fa.* FROM friend_activity fa
+        WHERE fa.userId IN (
+            SELECT followeeUserId FROM friend_activity_follow WHERE followerUserId=#{userId}
+        )
+    </select>
+
+    <select id="selectReviewsOfThisFriendActivity" parameterType="int"
+            resultType="top.stu.musicsystem.model.FriendActivityReview">
+        SELECT * FROM friend_activity_review WHERE friendActivityId = #{friendActivityId}
+    </select>
+
+
+
+
+    <select id="getUserAvatarPath" parameterType="int" resultType="string">
+        SELECT COALESCE(userAvatarPath, '') AS userAvatarPath
+        FROM friend_activity_avatar_path
+        WHERE userId = #{userId}
+    </select>
+
+
+    <select id="getSongCoverPath" parameterType="int" resultType="string">
+        SELECT COALESCE(songCoverAddress, '') AS songCoverPath
+        FROM song
+        WHERE songId = #{songId}
+    </select>
+
+
+    <select id="selectSongBySongName" parameterType="string" resultType="top.stu.musicsystem.model.Song">
+        SELECT * FROM song WHERE songName=#{songName}
+    </select>
+
+
+    <insert id="insertFriendActivity" parameterType="top.stu.musicsystem.model.FriendActivity">
+        INSERT INTO friend_activity (userId, songId, userName, reviewTime, content, songName)
+        VALUES (#{userId}, #{songId}, #{userName}, NOW(), #{content}, #{songName})
+    </insert>
+
+    <insert id="insertFriendActivityReview" parameterType="top.stu.musicsystem.model.FriendActivityReview">
+        INSERT INTO friend_activity_review (friendActivityId, userId, userName, reviewTime, content)
+        VALUES (#{friendActivityId}, #{userId}, #{userName}, NOW(), #{content})
+    </insert>
+
+
+
+
+    <select id="countUserLikeThisFriendActivityReview" parameterType="top.stu.musicsystem.model.FriendActivityReviewLike" resultType="int">
+        SELECT COUNT(*) FROM friend_activity_review_like
+        WHERE userId = #{userId} AND friendActivityReviewId = #{friendActivityReviewId}
+    </select>
+
+
+    <select id="countLikeCoefficientOfThisFriendActivityReview" parameterType="int" resultType="int">
+        SELECT COUNT(*) FROM friend_activity_review_like
+        WHERE friendActivityReviewId = #{friendActivityReviewId}
+    </select>
+
+    <insert id="insertFriendActivityReviewLike" parameterType="top.stu.musicsystem.model.FriendActivityReviewLike">
+        INSERT INTO friend_activity_review_like (userId, friendActivityReviewId)
+        VALUES (#{userId}, #{friendActivityReviewId})
+    </insert>
+
+    <delete id="deleteFriendActivityReviewLike" parameterType="top.stu.musicsystem.model.FriendActivityReviewLike">
+        DELETE FROM friend_activity_review_like
+        WHERE userId = #{userId} AND friendActivityReviewId = #{friendActivityReviewId}
+    </delete>
+
+
+
+    <select id="countUserLikeThisFriendActivity" parameterType="top.stu.musicsystem.model.FriendActivityLike" resultType="int">
+        SELECT COUNT(*) FROM friend_activity_like
+        WHERE userId = #{userId} AND friendActivityId = #{friendActivityId}
+    </select>
+
+    <select id="countLikeCoefficientOfThisFriendActivity" parameterType="int" resultType="int">
+        SELECT COUNT(*) FROM friend_activity_like
+        WHERE friendActivityId = #{friendActivityId}
+    </select>
+
+    <insert id="insertFriendActivityLike" parameterType="top.stu.musicsystem.model.FriendActivityLike">
+        INSERT INTO friend_activity_like (userId, friendActivityId)
+        VALUES (#{userId}, #{friendActivityId})
+    </insert>
+
+    <delete id="deleteFriendActivityLike" parameterType="top.stu.musicsystem.model.FriendActivityLike">
+        DELETE FROM friend_activity_like
+        WHERE userId = #{userId} AND friendActivityId = #{friendActivityId}
+    </delete>
+
+
+
+</mapper>
