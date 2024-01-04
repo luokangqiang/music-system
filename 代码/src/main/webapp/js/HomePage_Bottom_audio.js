@@ -43,7 +43,8 @@
 			list : '.audio-inline'
 		},
 
-		song : null// 一个数组，用于存储歌曲信息
+		song : null,// 一个数组，用于存储歌曲信息
+		songIndex:0,
 	};
 
 	var songEq = 0,//初始化为 0，表示当前歌曲的索引
@@ -115,9 +116,11 @@
 						_this.selectMenu(songEq,true);
 					},1000);
 				}else{
+
 					//如果未开启循环播放,等待1s随机顺序播放
 					setTimeout(function(){
 						++songEq;//通过递增 songEq 来选择下一首歌曲，并在到达歌单末尾时重新开始。
+						_this.songIndex = songEq;
 						songEq = (songEq < _this.song.length) ? songEq : 0;
 						_this.selectMenu(songEq,true);//selectMenu 方法用于根据歌曲索引选择歌曲
 					},1000);

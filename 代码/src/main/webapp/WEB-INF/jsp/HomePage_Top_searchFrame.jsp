@@ -43,7 +43,6 @@
                       	<!-- 歌曲信息区 -->
                       	<div class="clear text-ellipsis">
                           <span><a href="#" class="ahover" style="color: #1b1e21">${status.index+1}.${song.songName}</a></span>
-                          <span class="text-muted" style="color: #1b1e21"> -- _ _ -- </span>
                           <span class="badge badge-pill badge-primary badge-pill">${song.trendingCoefficient}</span>
                         </div>
                         <!-- 播放控制区 downloadFun(${song.songAddress})-->

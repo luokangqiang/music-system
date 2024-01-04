@@ -58,7 +58,6 @@
 			                      	<!-- 歌曲信息区 -->
 			                      	<div class="clear text-ellipsis">
 			                          <span style="color: #1b1e21">${status.index+1}.${song.songName}</span>
-			                          <span class="text-muted"> -- _ _ -- </span>
 			                          <span class="text-danger icon-fire"></span>
 			                        </div>
 			                        <!-- 播放控制区 downloadFun(${song.songAddress})-->
@@ -90,7 +89,6 @@
 			                      	<!-- 歌曲信息区 -->
 			                      	<div class="clear text-ellipsis">
 			                          <span style="color: #1b1e21">${status.index+1}.${song.songName}</span>
-			                          <span class="text-muted"> -- _ _ -- </span>
 			                          <span class="text-danger icon-fire"></span>
 			                        </div>
 			                        <!-- 播放控制区 downloadFun(${song.songAddress})-->

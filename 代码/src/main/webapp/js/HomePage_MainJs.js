@@ -2,8 +2,9 @@ $(function(){
     var song = [
 		{
 			'cover' : 'images/cover.jpg',
-			'src' : 'http://www.wangruns.top/wp-content/uploads/2017/03/%E4%B8%8D%E4%BB%85%E4%BB%85%E6%98%AF%E5%96%9C%E6%AC%A2.mp3',
-			'title' : '不仅仅是喜欢'
+			'src' : 'http://www.baidu.com',
+			'title' : '不仅仅是喜欢',
+			'songId':-1,
 		},
 	];
 
@@ -14,8 +15,9 @@ $(function(){
 	/* 向歌单中添加新曲目，第二个参数true为新增后立即播放该曲目，false则不播放 */
 	audioFn.newSong({
 		'cover' : 'images/cover6.jpg',
-		'src' : 'http://www.wangruns.top/wp-content/uploads/2017/03/I Knew You Were Trouble.mp3',
-		'title' : 'I Knew You Were Trouble'
+		'src' : 'http://www.baidu.com',
+		'title' : 'I Knew You Were Trouble',
+		'songId':-1,
 	},false);
 
 });
@@ -34,8 +36,10 @@ function playFunc(songId){//接受一个参数 songId。该函数的作用是根
     audioFn.newSong({//使用 audioFn.newSong 方法添加新歌并立即播放。传入一个包含歌曲信息的对象，其中包括歌曲的封面（cover）、地址（src）、标题（title），以及 true 参数表示立即播放
 		'cover' : 'images/cover4.jpg',
 		'src' : address,
-		'title' : name
+		'title' : name,
+		'songId':songId,
 	},true);
+
 
 }
 

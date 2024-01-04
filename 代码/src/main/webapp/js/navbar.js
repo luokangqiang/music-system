@@ -1,5 +1,6 @@
 $(function(){
-		
+	//处理注册
+
 		//处理登录
 		$("#login-submit").submit(function(){
 			var email=$("#inputEmail").val();

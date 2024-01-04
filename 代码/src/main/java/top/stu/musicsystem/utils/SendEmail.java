@@ -18,6 +18,7 @@ public class SendEmail {
 		Properties prop = new Properties();
 		prop.put("mail.transport.protocol", "smtp");
 		prop.put("mail.host", "smtp.qq.com");
+		prop.put("mail.port", 465);
 		prop.put("mail.smtp.auth", "true");
 		Session session = Session.getInstance(prop);
 		session.setDebug(true);
@@ -25,7 +26,7 @@ public class SendEmail {
 		try {
 			Message message = createSimpleMail(session, theme, messages, email);
 			Transport ts = session.getTransport();
-			ts.connect("1330265824@qq.com", "vexpuhzxfpqvicfi");
+			ts.connect("1330265824@qq.com", "npbgnigvixxoicfh");
 			ts.sendMessage(message, message.getAllRecipients());
 			ts.close();
 			return true;

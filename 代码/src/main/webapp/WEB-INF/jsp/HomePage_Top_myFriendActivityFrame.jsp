@@ -94,7 +94,7 @@ FriendActivityExample
 
         .header-text {
             text-align: left;
-            font-size: 3em;
+            font-size: 1.5em;
             margin-top: 20px;
             float: left;
         }
@@ -311,7 +311,7 @@ FriendActivityExample
 
     <div class="bg-white p-4 shadow rounded-lg">
         <!-- 标题大字... -->
-        <h1 class="header-text">好友空间</h1>
+        <h3 class="header-text" style="color: #6f42c1">音乐空间</h3>
         <!-- 发动态按钮... -->
         <button class="circle-button" id="createPostButton">
             <span class="icon-pencil"></span>
@@ -486,6 +486,7 @@ FriendActivityExample
                                     data: JSON.stringify({ activityReviewContent: activityReviewContent, friendActivityId: "${fa.friendActivityId}" }),
                                     success: function(backEndResponse) {
                                         alert(backEndResponse);
+                                        Friends_Activity_Page();
                                     },
                                     error: function(xhr, status, error) {
                                         alert("发评论失败");
@@ -602,20 +603,7 @@ FriendActivityExample
 
     <!-- 好友空间大字，小跳动特效框 -->
     <h1></h1>
-    <h3 style="color: #6f42c1">好友空间 ${oneDayOneWord}</h3>
-    <div class="row content hot-content">
-        <div class="col-sm-1">
-            <div class=" ">
-                <span class="musicbar animate bg-empty inline m-r-lg m-t" style="width:50px;height:60px">
-                  <span class="bar1 a3 lter"></span>
-                  <span class="bar2 a5 lt"></span>
-                  <span class="bar3 a1 bg"></span>
-                  <span class="bar4 a4 dk"></span>
-                  <span class="bar5 a2 dker"></span>
-                </span>
-            </div>
-        </div>
-    </div>
+
     <!-- 好友空间大字，小跳动特效框End -->
 </div>
 

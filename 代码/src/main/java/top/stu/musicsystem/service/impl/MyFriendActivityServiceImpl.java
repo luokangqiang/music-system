@@ -15,7 +15,6 @@ import java.util.*;
 public class MyFriendActivityServiceImpl implements MyFriendActivityService {
     @Autowired
     private UserDao userDao;
-
     @Autowired
     private MyFriendActivityDao myFriendActivityDao;
 
@@ -39,18 +38,13 @@ public class MyFriendActivityServiceImpl implements MyFriendActivityService {
 
         if (addrSymbolPosition != -1) {
             int end = content.indexOf("\\n", addrSymbolPosition);
-            int spacePostion = content.indexOf(" ", addrSymbolPosition);
-            boolean isNlSymbol = false;
-            if (spacePostion != -1 && (end == -1 || spacePostion < end)) {
-                isNlSymbol = true;
-                end = spacePostion;
-            }
+
             if (end == -1) {
                 attachSongName = content.substring(addrSymbolPosition + 1);
                 content = content.substring(0, addrSymbolPosition);
             } else {
                 attachSongName = content.substring(addrSymbolPosition + 1, end);
-                content = content.substring(0, addrSymbolPosition) + content.substring(end + (isNlSymbol ? 2 : 1));
+                content = content.substring(0, addrSymbolPosition) + content.substring(end + 2);
             }
         }
 
@@ -163,7 +157,7 @@ public class MyFriendActivityServiceImpl implements MyFriendActivityService {
 
                     // 赋初值 friendActivityReview 的 userAvatarPath
                     friendActivityReview.setUserAvatarPath(myFriendActivityDao.getUserAvatarPath(friendActivityReview.getUserId()));
-
+                    if (friendActivityReview.getUserAvatarPath() == null) { friendActivityReview.setUserAvatarPath(""); }
                 }
             }
             // 按评论发布时间给评论排序

@@ -55,7 +55,7 @@
                   <a class="nav-link" href="#" onclick="myMusicPage()" style="color: #e7e1cd">我的音乐</a>
               </li>
               <li class="nav-item" id="Friends_ActivityId">
-                  <a class="nav-link" href="#"  onclick="Friends_Activity_Page()" style="color: #e7e1cd">好友空间</a>
+                  <a class="nav-link" href="#"  onclick="Friends_Activity_Page()" style="color: #e7e1cd">音乐空间</a>
               </li>
           </ul>
 

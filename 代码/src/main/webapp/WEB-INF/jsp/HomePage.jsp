@@ -180,8 +180,9 @@
 
     <header id="HomePage_TopID"></header>
 
-    <div id="hot" style="background-image: url('/image/sun.png')">
-		<!-- 主界面中部的顶部页面滑动 -->
+<%--    <div id="hot" style="background-image: url('/image/sun.png')">--%>
+	    <div id="hot">
+	<!-- 主界面中部的顶部页面滑动 -->
         <div id="myCarousel" class="carousel slide  " data-ride="carousel"><!--carousel 和 slide 是 Bootstrap 框架中用于创建轮播组件的类。carousel 表示这是一个轮播组件的容器，而 slide 表示每个轮播项都是一张幻灯片-->
         <!--data-ride="carousel"：这是一个 HTML5 自定义数据属性，它在这里用来告诉 Bootstrap 启用轮播功能。data-ride 属性的值为 "carousel"，表示这个容器将作为一个轮播组件进行操作-->
 			<ol class="carousel-indicators">
@@ -251,35 +252,30 @@
 
 
 	<!-- 流动在整个页面固定位置底部的播放器栏 -->
-	<nav class=" fixed-bottom hide" id="playerId"><!--一个导航栏的容器，具有固定在底部的样式 (fixed-bottom)，并且添加了一个 hide 类，可能是用于控制初始时是否隐藏-->
+<%--	<nav class=" fixed-bottom hide" id="playerId"><!--一个导航栏的容器，具有固定在底部的样式 (fixed-bottom)，并且添加了一个 hide 类，可能是用于控制初始时是否隐藏-->--%>
 	 <!--div class="allPlayer"--><!--播放界面抱在一起-->
 		<!-- 新增的播放器界面容器 -->
-		<div id="playerId_newPage" style="background-color: #1b1e21">
+		<div id="playerId_newPage" style="background-color: #1b1e21;margin-top: 0">
 			<div id="playerId_newPage_Content" ><!-- 这里放歌词、控制按钮和评论区等内容 -->
-				<div  style="width:50%; left:50%; margin-left:240px;">
+				<div  style="width:40%; left:50%;height: 100%; margin-left:100px;">
 				<!--图片在左边，占页面40%-->
 				<div class="player_image" id="player_image" style="align-items: center;">
 					<br><br><br><br><br><br><br><br><br>
 					<img src="<c:url value="/image/player.jpg"/>"  alt=""><!--图片-->
 				</div>
 					<div class="Button_collect_download_share" id="Button_collect_download_share" >
-						<button class="Button_collect" id="Button_collect" style="color: #6f42c1">收藏</button>
-						<button class="Button_download" id="Button_download" style="color: #6f42c1">下载</button>
 						<button class="Button_share" id="Button_share" style="color: #6f42c1">分享</button>
 					</div>
+
 					<div id="overlay"></div><!--为了防止用户在弹出框显示时与其他页面元素进行交互-->
 					<!--分享按钮弹出框--->
 					<div id="shareModal" style="color: #e4606d;background-color: #e7e1cd">
 						<span id="closeButton">&times;</span>
 						<h2 style="color:purple;">在这里分享新鲜事吧</h2>
 						<form id="shareForm">
-							<label for="username">用户名:</label>
-							<input type="text" id="username" name="username" required><br>
 							<label for="comment">评论:</label>
 							<textarea id="comment" name="comment"></textarea><br>
-							<label for="imageInput">上传图片:</label>
-							<input type="file" id="imageInput" name="imageInput"><br>
-							<button type="button" id="submitButton">发布</button>
+							<button type="button" id="sharebutton" >发布</button>
 						</form>
 					</div>
 					<br><br><br><br><br>
@@ -306,7 +302,7 @@
 					<img class="rounded-circle" src="$ {pageContext.request.contextPath}/image/player.jpg" alt="Generic placeholder image" width="20" height="20" >
 				</div-->
 				<div class="audio-view" id="audio-view"><!--包含进度条和控制选项的容器 --> <!-- -->
-					<h1 class="audio-title">${song.songName} -${歌手}</h1><!--音频标题的标题,即显示当前播放的歌曲名字-->
+					<h1 class="audio-title" id="songName">${song.songName} -${歌手}</h1><!--音频标题的标题,即显示当前播放的歌曲名字-->
 					<!-- 进度条 -->
 					<div class="audio-body" id="progress-bar"><!--包含整个进度条的容器,包含了进度条的背景和其他子元素 -->
 						<div class="audio-backs"><!--进度条的背景容器，包含了当前播放时间、音频总时长、进度条的整体容器以及已缓冲部分的显示 -->
@@ -351,7 +347,6 @@
 			</div>
 		</div><!---小播放器-->
 	 <!--/div--><!--播放界面抱在一起-->
-	</nav><!-- 播放器栏 End-->
 
 	<!-- 始终固定在主界面数据下最底部，不随页面动而动 -->
      <footer class="container" id="footer_session" style="color: #6f42c1">
@@ -380,12 +375,41 @@
 		$('#HomePage_TopID').load("HomePage_TopLoad.do");//更新“HomePage_TopID”标签的内容，即主界面顶部内容
 	});
 	</script>
+	<script>
+		$('#sharebutton').click(function() {
+			var comment = $("#comment").val();
+			var songName = document.getElementById("songName").innerText;
+			console.log(songName);
+			var jsonStr = comment + "@" + songName;
+			console.log('分享内容：',jsonStr);
+			if (jsonStr) {
+				$.ajax({
+					url: 'postFriendActivity.do',
+					type: 'POST',
+					contentType: 'application/json;charset=UTF-8',
+					data: JSON.stringify({ activityContent: jsonStr }),
+					success: function(backEndResponse) {
+						alert(backEndResponse);
+						$('#shareForm').hide();
+					},
+					error: function(xhr, status, error) {
+						alert("发动态失败");
+					}
+				});
+			} else {
+				alert("动态内容不能为空");
+				return;
+			}
+		});
+	</script>
+
     <script>
 		//click 函数来监听class="audio-cover"中的点击事件，就是点击图片那里
 		$(".audio-cover").click(function() {
 			$("#hot").hide(); //
-			$("#playerId_newPage").show(); //显示新播放器界面
+			$('#homepage_3Column').hide();//隐藏底部的3个导航栏
 			$("#footer_session").hide(); //
+			$("#playerId_newPage").show(); //显示新播放器界面
 
 		$(document).ready(function () {
 			$('#Button_share').click(function() {//为“分享添加点击事件”
@@ -402,18 +426,16 @@
 				const imageInput = $('#imageInput').val();//获取图片输入
 				const currentTime = new Date().toLocaleString();//获取当前时间
 				// 控制台显示数据，需要更改传递方式
-				console.log('用户名:', username);//
-				console.log('评论:', comment);//
-				console.log('图片路径:', imageInput);//
-				console.log('当前时间:', currentTime);//
+				// console.log('用户名:', username);//
+				// console.log('评论:', comment);//
+				// console.log('图片路径:', imageInput);//
+				// console.log('当前时间:', currentTime);//
 				$('#shareModal, #overlay').fadeOut();// 提交后自动关闭分享框
 			});
-
 			//const audio = new Audio();//创建一个新的 Audio 对象
 			// 确保在使用函数之前完全加载 audio-player.js 脚本
 			// 保存原始的 window['audioPlay'] 函数
 			const originalAudioPlay = audioFn;
-
 			// 将函数分配给 myAudioPlayer
 			const myAudioPlayer = originalAudioPlay;
 			//const myAudioPlayer = window['audioPlay']();
@@ -522,9 +544,9 @@
 										const lyricContainerOffset = lyricContainer.offset().top;
 										const scrollTo = lyricLines[i].offsetTop - lyricContainerOffset - lyricContainer.height() / 2 + lineHeight / 2;
 										lyricContainer.scrollTop=scrollTo;
-										console.log("lyricContainer.height():", lyricContainer.height());
-										console.log("lineHeight:", lineHeight);
-										console.log("scrollTo:", scrollTo);
+										// console.log("lyricContainer.height():", lyricContainer.height());
+										// console.log("lineHeight:", lineHeight);
+										// console.log("scrollTo:", scrollTo);
 
 										const linesToShow = 9;//设置可见的歌词行数
 										//const lineNumber = Math.floor(currentTime / lineHeight); // 计算当前滚动行数：currentTime 是 500 毫秒，而 lineHeight 是 50 像素，那么 lineNumber 就是 Math.floor(500 / 50)，结果是 10。这意味着经过 500 毫秒后，你大约在内容顶部向下移动了 10 行

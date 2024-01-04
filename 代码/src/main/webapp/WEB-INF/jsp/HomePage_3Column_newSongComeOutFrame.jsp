@@ -44,7 +44,6 @@
                       	<div class="clear text-ellipsis">
                           <%-- <span>${status.index+1}.${song.songName}</span> --%>
                           <span><a href="#" class="ahover" onclick="reviewLoad(${song.songId})" style="color: #1b1e21">${status.index+1}.${song.songName}</a></span>
-                          <span class="text-muted"> -- _ _ -- </span>
                           <span class="text-danger icon-fire"></span>
                         </div>
                         <!-- 播放控制区 downloadFun(${song.songAddress})-->

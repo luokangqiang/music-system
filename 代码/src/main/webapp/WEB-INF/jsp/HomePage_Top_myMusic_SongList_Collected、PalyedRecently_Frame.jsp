@@ -25,7 +25,6 @@
 					<div class="clear text-ellipsis">
 						<span><!-- 这是歌曲的链接，点击链接会执行 reviewLoad 函数，并显示歌曲的名称 -->
 							<a href="#" class="ahover" onclick="reviewLoad(${song.songId})" style="color: #1b1e21">${status.index+1}.${song.songName}</a></span>
-						<span class="text-muted"> -- _ _ -- </span>
 						<span class="text-danger icon-fire"></span>
 					</div> <!-- 播放控制区 downloadFun(${song.songAddress})-->
 					<div class="pull-right m-l fr">
